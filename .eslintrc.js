@@ -6,7 +6,7 @@ module.exports = {
     "jest/globals": true,
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
-  setting: {
+  settings: {
     react: {
       version: "^18.2.0",
     },
