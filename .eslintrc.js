@@ -1,13 +1,12 @@
-// eslint-disable-next-line no-undef
 module.exports = {
   env: {
     browser: true,
-    node: true,
     es6: true,
+    node: true,
     "jest/globals": true,
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
-  settings: {
+  setting: {
     react: {
       version: "^18.2.0",
     },
