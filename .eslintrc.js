@@ -7,6 +7,11 @@ module.exports = {
     "jest/globals": true,
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
+  settings: {
+    react: {
+      version: "^18.2.0",
+    },
+  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
