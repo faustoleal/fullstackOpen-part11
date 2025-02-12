@@ -62,7 +62,8 @@
   "jest": {
     "testEnvironment": "jsdom",
     "testPathIgnorePatterns": [
-      "playwright_tests"
+      "playwright_tests",
+      "playwright_example"
     ]
   }
 }
