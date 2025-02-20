@@ -32,4 +32,4 @@ jobs:
           path: playwright-report/
           retention-days: 30
       - name: Trigger deployment
-        run: echo ${{secrets}}
+        run: echo ${{secrets.GITHUB_TOKEN}}
