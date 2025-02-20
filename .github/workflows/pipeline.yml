@@ -31,5 +31,5 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-      - name: Trigger Deployment
-        run: https://api.render.com/deploy/srv-cuq96t3tq21c73a3jojg?key=dCAVyICd86g
+      - name: Trigger deployment
+        run: echo ${{secrets}}
