@@ -5,9 +5,8 @@ on:
     branches:
       - main
 env:
-  render_service_id: ${{secrets.RENDER_SERVICE_ID}}
-  render_api_key: ${{secrets.RENDER_API_KEY}}
-
+  render_service_id: cuq96t3tq21c73a3jojg
+  render_api_key: dCAVyICd86g
 jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
