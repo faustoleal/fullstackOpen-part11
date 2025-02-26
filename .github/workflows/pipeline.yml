@@ -40,6 +40,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Bump version and push tag
+        with:
+          repository: ${{github.repositoryUrl}}
         if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.71.0
         env:
