@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smartlyio/fullstackopen-cicd.git"
+    "url": "git+https://github.com/faustoleal/fullstackOpen-part11"
   },
   "keywords": [
     "fullstack-open"
