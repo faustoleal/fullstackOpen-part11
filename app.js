@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.static("dist"));
 
 app.get("/health", (req, res) => {
-  res.send("succes");
+  res.send("ok, success");
 });
 
 app.listen(PORT, () => {
