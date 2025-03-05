@@ -38,6 +38,7 @@ jobs:
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push'}}
     permissions:
       contents: write
     steps:
@@ -45,7 +46,7 @@ jobs:
         with:
           fetch-depth: "0"
       - name: Bump version and push tag
-        if: ${{ github.event_name == 'push'}}
+        if: ${{contains(github.event.commits.*.message, 'skip')}}
         uses: anothrNick/github-tag-action@1.71.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
