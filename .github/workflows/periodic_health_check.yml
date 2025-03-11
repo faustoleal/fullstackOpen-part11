@@ -1,0 +1,16 @@
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v4
+        with:
+          url: https://fullstackopen-part11-n8np.onrender.com
+          follow-redirect: false
+          max-attempts: 3
+          retry-delay: 5s
+          retry-all: false
