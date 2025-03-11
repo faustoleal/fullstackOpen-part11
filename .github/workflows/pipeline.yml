@@ -47,7 +47,7 @@ jobs:
         if: failure() && ${{github.event_name == 'push'}}
         with:
           severity: error
-          details: Test Failed
+          details: Test Failed!
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag_release:
     needs: [simple_deployment_pipeline]
