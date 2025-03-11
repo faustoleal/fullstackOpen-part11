@@ -1,6 +1,8 @@
 name: Periodic Health Check
 
 on:
+  pull_request:
+    branches: ["second"]
   #schedule:
   # - cron: "*/15 * * * *"
 
