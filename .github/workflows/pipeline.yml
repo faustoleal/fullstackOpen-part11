@@ -45,10 +45,12 @@ jobs:
       - name: Test Failure
         uses: rjstone/discord-webhook-notify@v1
         if: failure() && ${{github.event_name == 'push'}}
+        env:
+          DISCORD_URL: ${{secrets.DISCORD_WEBHOOK}}
         with:
           severity: error
           details: Test Failed!
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          webhookUrl: ${{env.DISCORD_URL}}
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-latest
