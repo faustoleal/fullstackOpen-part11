@@ -37,18 +37,18 @@ jobs:
         run: curl https://api.render.com/deploy/srv-${{secrets.RENDER_SERVICE_ID}}?key=${{secrets.RENDER_API_KEY}}
       - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
-        if: success()
         env:
           DISCORD_URL: ${{secrets.DISCORD_WEBHOOK}}
+        if: success()
         with:
           severity: info
           details: Test Succeeded!
           webhookUrl: ${{env.DISCORD_URL}}
       - name: Test Failure
         uses: rjstone/discord-webhook-notify@v1
-        if: failure()
         env:
           DISCORD_URL: ${{secrets.DISCORD_WEBHOOK}}
+        if: failure()
         with:
           severity: error
           details: Test Failed!
